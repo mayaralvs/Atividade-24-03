@@ -30,12 +30,14 @@ const pessoa3 = new Pessoa("Maria",
 
 app.get('/hobbies',(req,res)=>{
 
-    res.send([pessoa1, pessoa2, pessoa3])
+    res.send(pessoa1)
     
 })
 
 
-
+app.get('/mostralista', (req,res)=> {
+    res.send([pessoa1, pessoa2, pessoa3])
+})
 app.listen(port,() =>{
     console.log('App executando na porta ' + port)
 })
